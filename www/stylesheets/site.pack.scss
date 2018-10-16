@@ -7,7 +7,9 @@
    @import "reset";
    @import "mixins";
    @import "font-awesome-4.7/font-awesome";
+   @import "owl-carousel";
    @import "variables";
-
+   @import "base";
    @import "header";
+   @import 'nav';
    @import "content";

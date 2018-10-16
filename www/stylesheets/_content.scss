@@ -11,50 +11,23 @@
    // Masthead
    .c-masthead__wrapper{
     height:100vh;
-
-    & > div{
-        height:100%;
-        background-repeat:no-repeat;
-        background-size:cover;
-        background-position: 80% 25%;
-
-        @include bp(medium){
-         background-position: center center;
-        }
-    }
 }
 
    .c-about__section{
+       display:flex;
+       flex-direction:row;
+
 
         @include bp(medium){
        height:600px;            
         }
-       & > div {
+
+       .c-rotator{
            height:100%;
        }
-       .vce-row-content{
 
-        & > div:first-child{
-           height:410px;
-            
-           @include bp(medium){
-               height:100%;
-           }
-        }
-
-        & > div:nth-child(2){
-            @include bp(medium){
-                height:100%;
-            }
-        }
-       }
-
-       .c-rotator__wrapper{
-           height:100%;
-
-           & > .vce-raw-html-wrapper{
-               height:100%;
-           }
+       & > div{
+           width:50%;
        }
    }
 
@@ -83,6 +56,7 @@
 .c-about__wrapper{
     font-family: sans-serif;
     padding:25px 25px;
+    background:yellow;
 
     @include bp(medium){
         padding: 100px;
@@ -101,23 +75,10 @@
     p + p{
         margin-top:20px;
     }
-
-    & > div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height:100%;
-    }
-    .vce{
-        margin-bottom:0;
-    }
 }
 
 // Image Slider
 .c-image-rotator{
-    .vce{
-        margin-bottom:0;
-    }
 }
 
 

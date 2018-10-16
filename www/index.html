@@ -7,8 +7,14 @@
         <h1 class="c-logo">Vanouhi</h1>
         </div>
           <div class="c-masthead__ablum-info">
-            <p>Introducing my brand new single: Roses</p>
-            <a href="https://soundcloud.com/user-559060853/roses" class="c-masthead__album--link">Listen to Roses Now</a>
+            <p>
+              {{#if header_callout}}
+              {{header_callout label="Callout Text"}}
+              {{/if}}
+            </p>
+            {{#if button_album_link}}
+            <a href="{{button_album_link}}" class="c-masthead__album--link">{{button_text}}</a>
+            {{/if}}
           </div>
         </div>
         <div class="c-scroll-page--down">
@@ -19,9 +25,19 @@
   
   {{#section about_section}}
   <section id="About" class="c-about__section">
-    <div class="c-rotator"></div>
+    <div class="c-rotator">
 
-    <div class="c-about__wrapper"></div>
+        <div class="owl-carousel">
+            {{#section about_slider multiple=true sortable=true}}
+            <div class="c-owl-item" style="background-image:url({{slider_image type=image tag=false}})"></div>
+            {{/section}}
+          </div>
+    </div>
+
+    <div class="c-about__wrapper">
+
+      {{about_text type=html}}
+    </div>
 
   </section>
 

@@ -99,18 +99,7 @@
    // Masthead
    .c-masthead__wrapper{
     height:100vh;
-
-    & > div{
-        height:100%;
-        background-repeat:no-repeat;
-        background-size:cover;
-        background-position: 80% 25%;
-
-        @include bp(medium){
-         background-position: center center;
-        }
-    }
-}
+} 
 .c-masthead-info__wrapper{
     display: flex;
     flex-direction: column;

@@ -11,10 +11,12 @@
 </a>
 <nav class="c-nav"> 
     <div class="c-main-nav__wrapper">
-    <ul class="c-main-nav__wrapper">
+    <ul class="c-primary-nav">
             {{#section nav_top multiple=true sortable=true}}
             {{#if link}}
+            <li class="menu-item">
               <a href="{{link type=link}}">{{label label="link name"}}</a>
+            </li>
             {{/if}}
             {{/section}}
     </ul>
