@@ -1,0 +1,84 @@
+/* ==========================================================================
+   # MIXINS
+   ========================================================================== */
+
+@mixin bp($point) {
+
+    @media(min-width:$point){
+        @content;
+    }
+
+    @if $point == xlarge {
+        @media (min-width: 1400px) {
+            @content;
+        }
+    }
+
+    @if $point == large {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $point == medium {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+    @else if $point == small {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $point == xsmall {
+        @media (min-width: 546px) {
+            @content;
+        }
+    }
+    @else {
+        @media (min-width: #{$point}){
+            @content;
+        }
+    }
+}
+
+@mixin custombp($bp){
+    @media(min-width:#{$bp}){
+        @content;
+    }
+}
+
+@mixin constrain() {
+
+
+    @include bp(small) {
+        width: 750px;
+        margin:0 auto;
+    }
+
+    @include bp(medium) {
+        width: 950px;
+    }
+
+    @include bp(large) {
+        width: 1170px;
+    }
+}
+
+
+
+@keyframes blowUpModal {
+    0% {
+      transform:scale(0);
+    }
+    100% {
+      transform:scale(1);
+    }
+  }
+  @-webkit-keyframes blowUpModal {
+    0% {
+      transform:scale(0);
+    }
+    100% {
+      transform:scale(1);
+    }
+  }
