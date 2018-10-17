@@ -1,5 +1,5 @@
 {{> header}}
-
+<section class="c-main__Section">
   {{#section header_section}}
 <section class="c-masthead__wrapper" style="background-image: url({{background_image type=image tag=false}})">
     <div class="c-masthead-info__wrapper">
@@ -35,13 +35,32 @@
     </div>
 
     <div class="c-about__wrapper">
-
+      {{#if about_text}}
       {{about_text type=html}}
+      {{/if}}
     </div>
 
   </section>
 
   {{/section}}
+
+  {{#section music_section}}
+  
+  <section id="Music" class="c-music__section">
+    <div class="c-music__text">
+      {{#if music_text}}
+      {{music_text type=html}}
+      {{/if}}
+    </div>
+
+    <div class="c-music__cover-image">
+      {{music_image type=image}}
+    </div>
+
+  </section>
+  {{/section}}
+
+</section>
 
 
 {{> footer}}
