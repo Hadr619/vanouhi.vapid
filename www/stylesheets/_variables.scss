@@ -6,3 +6,10 @@ $white:#fff;
 $black:#000;
 $minecraft:#333;
 $rose:#FE0168;
+
+.u-hide-on-scroll{
+    animation: hideOnScroll 0.5s ease-in-out forwards;
+    -webkit-animation: hideOnScroll 0.5s ease-in-out forwards;
+    animation-delay: .90s;
+}
+

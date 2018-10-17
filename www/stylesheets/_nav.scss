@@ -86,7 +86,7 @@ nav .c-main-nav__wrapper{
 	}
 
 	.menu-item{
-		// padding: .75rem 1.5rem;
+		padding: .75rem 1rem;
 		font-size: 16px;
 		font-family: 'Oswald', sans-serif;
 	  	font-weight: normal;
@@ -137,6 +137,10 @@ nav .c-main-nav__wrapper{
 			}
 	  }
 	}
+
+	.c-social-media__menu{
+		
+	}
 }
 
 
@@ -148,12 +152,14 @@ nav .c-main-nav__wrapper{
 	font-size:0;
 	width: 30px;
     height: 18px;
-    top: 7%;
-    left: 8%;
+
+    top: 4%;
+    left: 7%;
 	z-index: 3001;
 
 	@include bp("568px"){
-		top:12%;
+		top:10%;
+		left:5.25%;
 	}
 
 	@include bp(small){
@@ -306,7 +312,7 @@ nav .c-main-nav__wrapper{
 	display:flex;
 	height: auto;
 	align-items: center;
-	margin-left: 25px;
+	// margin-left: 25px;
 	margin-top:20px;
 
 	@include bp(medium){
@@ -372,6 +378,8 @@ nav .c-main-nav__wrapper{
 
 
 }
+
+
 
 .c-footer__container .c-social-media__menu{
 	margin-bottom:15px;

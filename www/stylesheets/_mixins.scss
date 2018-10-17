@@ -82,3 +82,20 @@
       transform:scale(1);
     }
   }
+
+  @keyframes hideOnScroll {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  @-webkit-keyframes hideOnScroll {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }

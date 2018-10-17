@@ -110,11 +110,26 @@ function viewport() {
         $(this).next('nav').toggleClass('c-nav--expanded');
   });
   
-  $('#menu-top-nav a').on('click', function(e) {
+  $('.c-primary-nav a').on('click', function(e) {
     // e.preventDefault();
     $('html').removeClass('c-nav--expanded');
     $('.nav-toggle').removeClass('c-nav--expanded');
     $('.nav-toggle').next('nav').removeClass('c-nav--expanded');
+
+    $('.c-nav-icon .c-nav-toggle--line').addClass('u-hide-on-scroll');
+
+    if(viewport().width <= 992){
+      var lastScrollTop = 0;
+      $(window).scroll(function(event){
+         var st = $(this).scrollTop();
+         if (st < lastScrollTop){
+            $('.c-nav-icon .c-nav-toggle--line').removeClass('u-hide-on-scroll');
+             
+         } 
+         lastScrollTop = st;
+      });
+    }
+
   });
   
   // Back to top
@@ -139,6 +154,8 @@ function viewport() {
     autoplaySpeed:1000,
     smartSpeed:500
   });
+
+
   
   
   

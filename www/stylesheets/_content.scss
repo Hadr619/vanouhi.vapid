@@ -71,10 +71,13 @@
 .c-about__wrapper{
     font-family: sans-serif;
     padding:25px 25px;
+    order:-1;
 
     @include bp(medium){
         padding: 100px;
         height: 100%;
+        order:0;
+
     }
 
     h2{
@@ -141,11 +144,7 @@
 .c-music__cover-image{
     height:100%;
     overflow:hidden;
-    order:-1;
 
-    @include bp(medium){
-        order:0;
-    }
 
 
     img{
