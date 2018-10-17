@@ -312,7 +312,7 @@ nav .c-main-nav__wrapper{
 	@include bp(medium){
 	height: 100%;
 	margin-top:0;
-	margin-left:15px;
+	margin-left:0;
 	}
 
 	li a{
@@ -383,7 +383,7 @@ nav .c-main-nav__wrapper{
 		}
 
 		& + li {
-			margin-left:10px;
+			margin-left:20px;
 		}
 	}
 }
